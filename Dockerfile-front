@@ -2,5 +2,6 @@ FROM node:14.7-stretch
 COPY ./client /frontend
 WORKDIR /frontend
 RUN npm install
+RUN npm run build
 RUN mkdir -p /frontend/public/assets/covers
 CMD npm run serve
