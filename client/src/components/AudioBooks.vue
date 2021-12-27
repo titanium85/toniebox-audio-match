@@ -44,7 +44,7 @@
 import axios from 'axios';
 import Tonies from './Tonies.vue';
 
-const backendUrl = `${process.env.VUE_APP_BACKEND_SCHEME}://${process.env.VUE_APP_BACKEND_HOST}:${process.env.VUE_APP_BACKEND_PORT}`;
+const backendUrl = ('VUE_APP_BACKEND_IS_LOCAL' in process.env) ? '' : `${process.env.VUE_APP_BACKEND_SCHEME}://${process.env.VUE_APP_BACKEND_HOST}:${process.env.VUE_APP_BACKEND_PORT}`;
 
 function cmp(a, b) {
   if (!a && !b) {
